@@ -1,5 +1,5 @@
 ## Parent image
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 ## Essential environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 COPY . .
 
 ## Run setup.py
-RUN pip install --no-cache-dir -e .
+RUN pip install --upgrade pip && pip install --no-cache-dir -e .
 
 # Used PORTS
 EXPOSE 8501
