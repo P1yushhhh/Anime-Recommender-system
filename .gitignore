@@ -12,3 +12,5 @@ wheels/
 # Environment Variables
 .env 
 
+#vector store
+chroma_db

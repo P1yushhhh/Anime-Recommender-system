@@ -21,7 +21,7 @@ def main():
         vector_builder.build_and_save_vector_store()
 
         logger.info("Vector Store Built Succesfully....")
-        logger.info("Pipelien built sucesfuly....")
+        logger.info("Pipeline built sucesfuly....")
     except Exception as e:
             logger.error(f"Failed to execute pipeline {str(e)}")
             raise CustomException("Error during pipeline " , e)
