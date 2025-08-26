@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     && rm -rf /var/lib/apt/lists/*
-    
+
 ##Upgrade pip tooling early
 RUN python -m pip install --upgrade pip setuptools wheel
 
@@ -26,7 +26,7 @@ RUN pip install -r requirements.txt
 ##Copy the rest of the source
 COPY . .
 
-Expose Streamlit port
+#Expose Streamlit port
 EXPOSE 8501
 
 ##Run the app
