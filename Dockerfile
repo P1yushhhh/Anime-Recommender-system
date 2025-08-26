@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ##Upgrade pip tooling early
 RUN python -m pip install --upgrade pip setuptools wheel
 
-Copy only dependency files first to leverage Docker layer caching
+##Copy only dependency files first to leverage Docker layer caching
 ##Adjust these lines depending on how dependencies are declared
 COPY requirements.txt ./
 ## Install Python dependencies
