@@ -1,11 +1,11 @@
 FROM python:3.11-slim
 
 ##Essential environment variables
-ENV PYTHONDONTWRITEBYTECODE=1
-PYTHONUNBUFFERED=1
-PIP_NO_CACHE_DIR=1
-DEBIAN_FRONTEND=noninteractive
-
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    DEBIAN_FRONTEND=noninteractive
+    
 ##Work directory
 WORKDIR /app
 
