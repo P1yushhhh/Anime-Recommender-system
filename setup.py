@@ -1,6 +1,6 @@
 from setuptools import setup,find_packages
 
-with open("pyproject.toml") as f:
+with open("rquirements.txt") as f:
     requirements = f.read().splitlines()
 
 setup(
