@@ -1,0 +1,11 @@
+2025-08-26 15:00:21,376 - INFO - Initialization of recommender pipeline
+2025-08-26 15:00:24,301 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-26 15:00:25,846 - INFO - Pipeline Initialized Succesfully
+2025-08-26 15:00:39,707 - INFO - Received a Query recommend an anime similar to one piece
+2025-08-26 15:00:43,287 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 15:01:09,293 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:01:09,450 - INFO - Recommendation generated succesfully...
+2025-08-26 15:01:40,694 - INFO - Received a Query recommend a dark anime
+2025-08-26 15:01:44,034 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 15:02:02,885 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:02:02,886 - INFO - Recommendation generated succesfully...

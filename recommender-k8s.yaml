@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: AnimeRecommender-app
+  labels:
+    app: AnimeRecommender
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: AnimeRecommender
+  template:
+    metadata:
+      labels:
+        app: AnimeRecommender
+    spec:
+      containers:
+      - name: AnimeRecommender-container
+        image: AnimeRecommender-app:latest  # Use local image
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8501
+        envFrom:
+          - secretRef:
+              name: AnimeRecommender-secrets 
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: AnimeRecommender-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: AnimeRecommender
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8501
